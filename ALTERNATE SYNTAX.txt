@@ -1,0 +1,36 @@
+Alternative Control Syntaxes
+PHP supports an alternative way of writing control structures. As per the alternate syntax, we will replace the initial brace with a colon and the closing brace with a structure ending statement such as endif, endswitch, endfor or endwhile.
+
+For example, if...else becomes the following:
+
+if (expression):
+    statement1
+    statement2
+    …
+endif;
+Or, the if…elseif…else syntax with the structure ending statement looks as follows:
+
+if (expression1):
+    statement1
+    statement2
+    …
+elseif (expression2):
+    statement3
+    …
+else:
+    statement4
+ …
+endif;
+The while loop becomes the following:
+
+while (expression):
+      statement
+endwhile;
+The same goes for the for loop:
+
+for (expr1; expr2; expr3):
+     statement1
+     statement2
+      …
+endfor;
+So, it is up to us which syntax we follow. The alternative syntax is supported for users of the earlier versions of PHP. 
