@@ -1,5 +1,5 @@
 <?php
-class Vehicle
+class sedan
 {
     public $make = 'DefaultMake';
     public $model = 'DefaultModel';
@@ -47,7 +47,7 @@ class Vehicle
         $this->engineNumber = $engineNo;
     }
 }
-$object = new Vehicle();
+$object = new sedan();
 $object->setMake('Honda');
 $object->setModel('Civic');
 $object->setColor('Red');
