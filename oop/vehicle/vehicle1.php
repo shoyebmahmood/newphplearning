@@ -11,8 +11,10 @@ class Vehicle
     public $make;
     public $model;
     public $color;
-    public $noOfWheels;
-    public $engineNumber;
+
+    protected $noOfWheels;
+
+    private $engineNumber;
     function __construct($make = 'DefaultMake', $model = 'DefaultModel', $color = 'DefaultColor', $wheels = 4, $engineNo = 'xxxxxx')
     {
         $this->make = $make;
