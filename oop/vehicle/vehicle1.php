@@ -11,10 +11,9 @@ class Vehicle
     public $make;
     public $model;
     public $color;
-
     protected $noOfWheels;
-
     private $engineNumber;
+    public static $counter = 0;
     function __construct($make = 'DefaultMake', $model = 'DefaultModel', $color = 'DefaultColor', $wheels = 4, $engineNo = 'xxxxxx')
     {
         $this->make = $make;
@@ -22,6 +21,7 @@ class Vehicle
         $this->color = $color;
         $this->noOfWheels = $wheels;
         $this->engineNumber = $engineNo;
+        self::$counter++;
     }
     //add the following five methods after the attributes section
     /*
