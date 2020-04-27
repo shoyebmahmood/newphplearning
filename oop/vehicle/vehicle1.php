@@ -1,6 +1,6 @@
 <?php
 //declare the Vehicle class
-class Vehicle
+abstract class AbstractVehicle
 {
     /* public $make = 'DefaultMake';
     public $model = 'DefaultModel';
@@ -14,6 +14,7 @@ class Vehicle
     protected $noOfWheels;
     private $engineNumber;
     public static $counter = 0;
+    protected $engineStatus = false;
     function __construct($make = 'DefaultMake', $model = 'DefaultModel', $color = 'DefaultColor', $wheels = 4, $engineNo = 'xxxxxx')
     {
         $this->make = $make;
@@ -69,6 +70,15 @@ class Vehicle
     function setEngineNumber($engineNo)
     {
         $this->engineNumber = $engineNo;
+    }
+    abstract function start();
+    function stop()
+    {
+        $this->engineStatus = false;
+    }
+    function getEngineStatus()
+    {
+        return $this->engineStatus;
     }
 }
 /*
