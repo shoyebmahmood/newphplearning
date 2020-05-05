@@ -1,5 +1,5 @@
 <?php
-require_once 'vehicle1.php';
+require_once 'AbstractVehicle.php';
 class Motorcycle extends AbstractVehicle
 {
     public $noOfWheels = 2;
