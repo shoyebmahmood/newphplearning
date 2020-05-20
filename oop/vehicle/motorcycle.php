@@ -1,6 +1,7 @@
 <?php
 require_once 'AbstractVehicle.php';
-class Motorcycle extends AbstractVehicle
+require_once 'DriveInterface.php';
+class Motorcycle extends AbstractVehicle implements DriveInterface
 {
     public $noOfWheels = 2;
     public $stroke = 2;
@@ -11,6 +12,18 @@ class Motorcycle extends AbstractVehicle
         if ($this->hasKey && $this->hasKicked) {
             $this->engineStatus = true;
         }
+    }
+    public function changeSpeed($speed)
+    {
+        echo "The motorcycle has been accelerated to " . $speed . " kph. " . PHP_EOL;
+    }
+    public function changeGear($gear)
+    {
+        echo "Gear shifted to " . $gear . ". " . PHP_EOL;
+    }
+    public function applyBreak()
+    {
+        echo "The break applied. " . PHP_EOL;
     }
 }
 /*
@@ -41,3 +54,7 @@ echo "The motorcycle is " . ($motorcycle->getEngineStatus() ?
 $motorcycle->stop();
 echo "The motorcycle is " . ($motorcycle->getEngineStatus() ?
     'running' : 'stopped') . PHP_EOL;
+$motorcycle = new Motorcycle('Kawasaki', 'Ninja', 'Orange', 2, '53WVC14598');
+$motorcycle->changeSpeed(45);
+$motorcycle->changeGear(3);
+$motorcycle->applyBreak();
